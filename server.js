@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser= require('body-parser')
 const multer = require('multer');
 const app = express();
-const path = require ("path");
+
 app.use(bodyParser.urlencoded({extended: true}))
 
 app.use(express.static(__dirname + '/public'));
