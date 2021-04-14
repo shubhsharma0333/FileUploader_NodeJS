@@ -1,0 +1,21 @@
+.form{
+  margin: auto;
+  height: 60%;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+h1{
+  text-align: center;
+  color: grey;
+}
+
+.btn{
+  margin-left: 40%;
+  width: 20%;
+}
+.file-upload-wrapper{
+  width :100%;
+  height: auto;
+}
