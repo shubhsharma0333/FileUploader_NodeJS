@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>File Uploader</title>
+
+      <link rel="stylesheet" type="text/css" href="css/styles.css" />
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+  </head>
+  <body>
+
+    <h1>Welcome To File Uploader</h1>
+    <div class="form">
+      <form method="post" action="/uploadFiles" enctype="multipart/form-data" >
+        <label for="formFileLg" class="form-label">click On Choose File Or Drag & Drop <i class="fas fa-cloud-upload-alt"></i></label>
+        <div class="file-upload-wrapper">
+          <input type="file" id="input-file-now-custom-2" name="filesToUpload" multiple/>
+        </div>
+        <div>
+          <input type="submit" value="submit" class="btn btn-success" disabled/>
+        </div>
+      </form>
+    </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Conditional JQuery for input button -->
+
+  <script type="text/javascript">
+  $(document).ready(
+  function(){
+      $('input:file').change(
+          function(){
+              if ($(this).val()) {
+                  $('input:submit').attr('disabled',false);
+                  // or, as has been pointed out elsewhere:
+                  // $('input:submit').removeAttr('disabled');
+              }
+          }
+          );
+  });
+  </script>
+
+  </body>
+</html>
